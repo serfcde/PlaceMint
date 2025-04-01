@@ -1,0 +1,177 @@
+/* Modal overlay styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal box styles */
+.modal {
+  background-color: var(--medium-blue);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.show .modal {
+  transform: translateY(0);
+}
+
+/* Modal title */
+.modal h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Close button styles */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: var(--light-gray);
+}
+
+/* Form group styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray);
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--purple);
+}
+
+/* Forgot password link */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-password a {
+  color: var(--light-gray);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+  color: var(--white);
+}
+
+/* Sign-in button styles */
+.sign-in-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--purple);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.sign-in-button:hover {
+  background-color: var(--dark-purple);
+}
+
+/* Social login section styles */
+.social-login {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.social-login p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--light-gray);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  border: none;
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.social-icon:hover {
+  background-color: var(--purple);
+  transform: scale(1.1);
+}
+
+/* Sign up link section styles */
+.signup-link {
+  text-align: center;
+}
+
+.signup-link p {
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: var(--white);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signup-link a:hover {
+  color: var(--light-gray);
+}
